@@ -8,9 +8,9 @@
 class CAutocheck8Object :public CSimulationObject {
 
 public:
-    CAutocheck8Object(CSimulator* simulator, std::string nom);
+    Autocheck8Object(CSimulator* simulator, std::string nom);
 
-    ~CAutocheck8Object() {}
+    ~Autocheck8Object() {}
 
     //Métode que el simulador us invocarà per a recollir els estadístics (print per consola)
     void showStatistics();
