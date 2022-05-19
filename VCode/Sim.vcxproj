@@ -100,6 +100,7 @@
     <ClCompile Include="eventlist.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="montyobject.cpp" />
+    <ClCompile Include="Passaport8Object.cpp" />
     <ClCompile Include="passenger.cpp" />
     <ClCompile Include="simulationevent.cpp" />
     <ClCompile Include="simulator.cpp" />
@@ -108,6 +109,7 @@
     <ClInclude Include="entity.h" />
     <ClInclude Include="eventlist.h" />
     <ClInclude Include="montyobject.h" />
+    <ClInclude Include="Passaport8Object.h" />
     <ClInclude Include="passenger.h" />
     <ClInclude Include="simulationevent.h" />
     <ClInclude Include="simulationobject.h" />
