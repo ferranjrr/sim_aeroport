@@ -1,0 +1,14 @@
+﻿  Passaport8Object.cpp
+  simulator.cpp
+D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\simulator.cpp(7): error C2259: 'CMontyObject': cannot instantiate abstract class
+D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\montyobject.h(5): message : see declaration of 'CMontyObject'
+D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\simulator.cpp(7): message : due to following members:
+D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\simulator.cpp(7): message : 'bool CSimulationObject::AcceptEntity(CEntity *,CSimulationObject *)': is abstract
+D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\simulationobject.h(24): message : see declaration of 'CSimulationObject::AcceptEntity'
+D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\simulator.cpp(7,40): error C2259: 'CMontyObject': cannot instantiate abstract class
+D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\montyobject.h(5): message : see declaration of 'CMontyObject'
+D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\simulator.cpp(7,40): message : due to following members:
+D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\simulator.cpp(7,40): message : 'bool CSimulationObject::AcceptEntity(CEntity *,CSimulationObject *)': is abstract
+D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\simulationobject.h(24): message : see declaration of 'CSimulationObject::AcceptEntity'
+  Generating Code...
+D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\Passaport8Object.cpp(19): error C4716: 'Passaport8Object::AcceptEntity': must return a value
