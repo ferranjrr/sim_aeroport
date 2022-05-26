@@ -19,6 +19,6 @@ public:
     void simulationEnd();
 
 protected:
-    //queue<int> EntryQueue;
-    //queue<int> ExitQueue;
+    queue<int> EntryQueue;
+    queue<int> ExitQueue;
 };
