@@ -1,2 +1,0 @@
-Para ejecutar el documeto en Microsoft Visual Studio --> Abrir el archivo .sln que está dentro de la carpeta VCode.
-Ejecución: Ctrl + F5 (para que no se cierre la ventana de ejecución de golpe y poder ver los outputs).
