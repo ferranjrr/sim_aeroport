@@ -8,9 +8,9 @@
 class CPassenger:public CEntity{
     public:
         //Constructora per a passatgers que volen agafar un vol
-        CPassenger(float currentTime);
+        CPassenger(int id,float currentTime);
         //Constructora per a passatgers que arriben amb un vol
-        CPassenger(float currentTime,std::string idFlight);
+        CPassenger(int id,float currentTime,std::string idFlight);
         //Destructora
         ~CPassenger(){};
         //Aconsegueix el finger on hauria d'embarcar
@@ -29,7 +29,17 @@ class CPassenger:public CEntity{
         bool isSchengen();  
          //Retorna un booleà per indicar si el passatger agafa un vol domèstic
         bool isDomestic();        
+        //Perd l'avió        
+        void lostFlight(){
+            m_takeFlight=false;
+        }
+        //Marca al passatger com una entitat que ha realitzat el checkin
+        void setCheckin(){
+            m_checkin=true;
+        }
     protected:
+        //identificador únic
+        int m_id;
         //Inicialització dels atributs del passatger
         void init(float currentTime,bool takeflight);
         //Estableix si el passatger és schengen i el finger destí
@@ -38,7 +48,6 @@ class CPassenger:public CEntity{
         bool randomBool(int limit);
         //valor enter en funció d'un valor màxim
         int randomInt(int limit);
-        //Variables membres
         //Identificador de finger destí o origen del passatger
         int m_idFinger;
         //Hora de sortida

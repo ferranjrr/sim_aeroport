@@ -4,7 +4,7 @@
 
 class CEntity;
 
-enum enumEventType { ePUSH,eSERVICE};
+enum enumEventType { ePUSH=0,eSERVICE=1};
         
 class CSimulationEvent{
     public:
@@ -15,7 +15,7 @@ class CSimulationEvent{
         CSimulationObject* getProvider(){return m_provider;};
         CSimulationObject* getConsumer(){return m_consumer;};
         CEntity* getEntity(){return m_entity;};
-        enumEventType getEventType();
+        enumEventType getEventType(){return m_eventType;};
         void executed();
         void isUnexpected();
     protected:
@@ -24,6 +24,7 @@ class CSimulationEvent{
         CEntity* m_entity;
         enumEventType m_eventType;
         float m_eventTime;
+        float m_schedulledTime;
 };
 
 

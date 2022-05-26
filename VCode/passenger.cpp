@@ -1,18 +1,17 @@
 #include "passenger.h"
 #include "entity.h"
-#include "time.h"
 
 using namespace std;
 
 //Constructora per a passatgers que volen agafar un vol
-CPassenger::CPassenger(float currentTime)
+CPassenger::CPassenger(int id,float currentTime):CEntity(id, currentTime)
 {
         init(currentTime,true);
         setSchenger(randomBool(80));
 }
 
 //Constructora per a passatgers que arriben amb un vol
-CPassenger::CPassenger(float currentTime,std::string idFlight)
+CPassenger::CPassenger(int id,float currentTime,std::string idFlight):CEntity(id, currentTime)
 {
         init(currentTime,false);
         setSchenger(idFlight=="SCH");
