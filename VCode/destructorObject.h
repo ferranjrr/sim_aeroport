@@ -3,10 +3,10 @@
 #include "simulator.h"
 
 
-class CMontyObject:public CSimulationObject{
+class CDestructorObject:public CSimulationObject{
     public:
-    CMontyObject(CSimulator* simulator,int category, int id, std::string nom);
-    ~CMontyObject(){}
+    CDestructorObject(CSimulator* simulator,int category, int id, std::string nom);
+    ~CDestructorObject(){}
     //Métode que el simulador us invocarà per a recollir els estadístics (print per consola)
     void showStatistics();
     //És una funció virtial pura així que us tocarà implementar-la indiferentment de si la invoqueu o no.

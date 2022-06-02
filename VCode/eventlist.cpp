@@ -41,7 +41,7 @@ void CEventList::insert(CSimulationEvent* event){
     }
     else{
         struct__item* rec=first;
-        struct__item* darrer;
+        struct__item* darrer=first;
         while (rec!=nullptr && event->getTime() > rec->info->getTime() ){
             darrer=rec;
             rec=rec->post;
