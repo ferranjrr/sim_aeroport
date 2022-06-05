@@ -7,35 +7,42 @@
 
 using namespace std;
 
-Passaport8Object::Passaport8Object(CSimulator* simulator, string nom) :CSimulationObject(simulator)
+CPassaport8Object::CPassaport8Object(CSimulator* simulator, int category, string id, string nom, int maxCua):CSimulationObject(simulator, category, id, nom)
 {
-    setState(IDLE);
-    EntryQueue = queue<int>();
-    ExitQueue = queue<int>();
+    EntryQueue = queue<CPassenger>();
+    ExitQueue = queue<CPassenger>();
+    MAX_CUA = maxCua;
+    _nom = nom;
 }
 
 //És una funció virtial pura així que us tocarà implementar-la indiferentment de si la invoqueu o no.
-bool Passaport8Object::AcceptEntity(CEntity* entity, CSimulationObject* emissor) {
-    
+bool CPassaport8Object::AcceptEntity(CEntity* entity, CSimulationObject* emissor) {
+    //if (emissor.get)
+    return EntryQueue.size() < MAX_CUA;
 };
 
 //Métode que el simulador us invocarà per a recollir els estadístics (print per consola)
-void Passaport8Object::showStatistics() {
-    
+void CPassaport8Object::showStatistics() {
+    cout << "Sóc el control de passaport " << _nom << "i la meva MAX_CUA és de " << MAX_CUA << endl;
 };
 
+bool CPassaport8Object::SendMeNow(CSimulationObject* tincEspai) {
+    if (ExitQueue.size() <= MAX_CUA) return true;
+    else return false;
+}
+
 //Processar un esdeveniment de simulació, funció pura que us toca implementar
-void Passaport8Object::processEvent(CSimulationEvent* event) {
+void CPassaport8Object::processEvent(CSimulationEvent* event) {
     
 }
 
 //Métode que el simulador invocarà a l'inici de la simulació, abans de que hi hagi cap esdeveniment a la llista d'esdeveniments
-void Passaport8Object::simulationStart() {
+void CPassaport8Object::simulationStart() {
     setState(IDLE);
-    EntryQueue = queue<int>();
-    ExitQueue = queue<int>();
+    EntryQueue = queue<CPassenger>();
+    ExitQueue = queue<CPassenger>();
 }
 //Métode que el simulador us pot invocar a la finalització de l'estudi
-void Passaport8Object::simulationEnd() {
+void CPassaport8Object::simulationEnd() {
 
 }

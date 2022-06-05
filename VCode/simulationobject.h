@@ -3,7 +3,7 @@
 #include <iostream>
 #include <list>
 #include "entity.h"
-#include "struct.h"
+//#include "struct.h"
 #include <string>
 
 class CSimulator;

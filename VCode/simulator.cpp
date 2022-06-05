@@ -10,6 +10,8 @@
 #include <map>
 #include <vector>
 
+#include "Passaport8Object.h"
+
 CSimulator::CSimulator(){
     m_IDObject=0;
     m_IDEntity=0;
@@ -203,8 +205,8 @@ CSimulationObject* CSimulator::instantiate(std::string configuracio)
         case 34:
         return new CMontyObject(this,categoria,newID(),opcions[2]);
         break;
-        case 35:
-        return new CMontyObject(this,categoria,newID(),opcions[2]);
+/*jo*/  case 35:
+        return new CPassaport8Object(this, categoria, newID(), opcions[2], std::stoi(opcions[4]));
         break;
         case 36:
         return new CMontyObject(this,categoria,newID(),opcions[2]);
