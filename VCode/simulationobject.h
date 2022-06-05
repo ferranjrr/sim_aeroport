@@ -3,12 +3,14 @@
 #include <iostream>
 #include <list>
 #include "entity.h"
-//#include "struct.h"
+#include "structs.h"
 #include <string>
+
+using namespace std;
 
 class CSimulator;
 
-enum enumStateObject { IDLE,SERVICE,OUTOFSERVICE,REPAIR};
+enum enumStateObject {AVAILABLE,BROKEN,BUSY,CLOSED,EMPTY,ESPATLLADA,FULL,FUNCIONANT,IDLE,INSERVICE,LOADING,MOVING,NOEMPTY,NOTFULL,NOTEMPTY,PARADA,SERVICE,OUTOFSERVICE,REPAIR};
 
 class CSimulationObject{    
     public:
@@ -25,7 +27,9 @@ class CSimulationObject{
         //Métode que el simulador us invocarà per a recollir els estadístics (print per consola)
         virtual void showStatistics()=0;
         //És una funció virtial pura així que us tocarà implementar-la indiferentment de si la invoqueu o no.
-        virtual bool AcceptEntity(CEntity* entitat)=0;
+        virtual bool AcceptEntity(CSimulationObject* emissor)=0;//Jo puc saber on es troba l'entitat demanant pel getPlace()
+        //És una funció virtial pura així que us tocarà implementar-la indiferentment de si la invoqueu o no.
+        virtual bool SendMeNow(CSimulationObject* tincEspai)=0;
         //Retorna l'estat actual de l'objecte
         enumStateObject getState(){return m_state;};
         //Processar un esdeveniment de simulació, funció pura que us toca implementar
@@ -42,6 +46,14 @@ class CSimulationObject{
         CSimulator* getSimulator(){return m_Simulator;};
         //Recupera el nom de l'objecte
         std::string getName(){return m_name;};
+        //dona paxs que voldran baixar de planta
+        bool ToBCN(){return m_toBCN;}
+        //Fixem categoria objecte
+        void setToBCN(bool siono){m_toBCN=siono;}
+        //Retorna l'entitat activa
+        CEntity* getCurrentEntity(){return m_currentEntity;}
+        //Fixa l'entitat activa
+        void setCurrentEntity(CEntity* entitat){m_currentEntity=entitat;}
     protected:
         //Estableix l'estat de l'objecte
         void setState(enumStateObject estat);
@@ -55,6 +67,10 @@ class CSimulationObject{
         int m_id;
         //nom de l'objecte
         std::string m_name;
+        //els paxs d'aquest objecte volen baixar de planta
+        bool m_toBCN;
+        //Entitat activa en l'objecte, és l'entitat que està associada a l'event que s'esta avaluant
+        CEntity* m_currentEntity;
 };
 
 

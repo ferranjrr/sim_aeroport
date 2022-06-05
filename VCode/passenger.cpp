@@ -23,11 +23,12 @@ void CPassenger::init(float currentTime,bool outBCN){
         m_baggage=randomBool(50);
         m_PMR=randomBool(5);
         m_takeFlight=outBCN;
+        m_LostFlight=false;
 }
 void CPassenger::setSchenger(bool schengen){
         m_Schengen=schengen;
         if (m_Schengen){
-                m_idFinger=randomInt(10);
+                m_idFinger=randomInt(16);
                 m_Domestic=randomBool(5);
         }
         else{

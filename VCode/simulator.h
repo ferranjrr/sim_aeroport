@@ -2,6 +2,7 @@
 #include <iostream>
 #include <list>
 #include <map>
+#include <vector>
 
 #include "passenger.h"
 #include "simulationobject.h"
@@ -27,6 +28,8 @@ class CSimulator{
       void eventUnexpected(CSimulationEvent* event);
       //Retorna el temps per arribar a un objecte des de la posició actual
       float timeTo(CSimulationObject* desti,CPassenger* pax);
+      //Devuelva el finger
+      CSimulationObject* getFinger(int idFinger);
       //Programa un esdeveniment de simulació
       void scheduleEvent(CSimulationEvent* event);
       //Retorna una llista de tuples de possibles destins i temps per arribar
@@ -65,6 +68,8 @@ class CSimulator{
       CEventList* m_eventList;
       //Diccionari per a enrutar paxs
       std::map<int,std::vector<CSimulationObject*> > m_objectes;
+      //Vector de Fingers de sortida
+      std::vector<CSimulationObject*> m_fingersSortida;
       //Ruta per agafar vol
       std::map<int,std::vector<int> > m_routeFlight;
       //Ruta per anar a BCN
@@ -81,5 +86,7 @@ class CSimulator{
       int newID(){ return ++m_IDObject;};
       //Dona l'identificado únic de l'entitat
       int newIDEntity(){ m_IDEntity++; return m_IDEntity;};
+      //El destructor
+      CSimulationObject* m_destructor;
 };
 

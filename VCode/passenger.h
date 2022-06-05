@@ -32,11 +32,13 @@ class CPassenger:public CEntity{
         //Perd l'avió        
         void lostFlight(){
             m_takeFlight=false;
+            m_LostFlight=true;
         }
         //Marca al passatger com una entitat que ha realitzat el checkin
         void setCheckin(){
             m_checkin=true;
         }
+        bool HaslostFlight(){return m_LostFlight;}
     protected:
         //identificador únic
         int m_id;
@@ -64,4 +66,6 @@ class CPassenger:public CEntity{
         bool m_Schengen;
         //És un passatger que realitza un vol Nacional
         bool m_Domestic;
+        //Ha perdut el vol
+        bool m_LostFlight;
 };

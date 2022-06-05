@@ -7,10 +7,9 @@
 #include "passenger.h"
 #include <fstream>
 #include <string>
+//#include "estudiants.h"
 #include <map>
 #include <vector>
-
-#include "Passaport8Object.h"
 
 CSimulator::CSimulator(){
     m_IDObject=0;
@@ -37,7 +36,7 @@ void CSimulator::routeMap(){
                 toFlight=false;
                 continue;
             }
-            //Una ruta és una cadena de números separats per ',' on el primer nombre et marca la categoria d'origen i els darrers nombres les categories dels objectes als que pots arribar
+            //Una ruta és una cadena de Numeros separats per ',' on el primer nombre et marca la categoria d'origen i els darrers nombres les categories dels objectes als que pots arribar
             cout << definicioRuta << '\n';
             std::vector<int> ruta;
             ruta=splitInt(definicioRuta, ',');
@@ -74,6 +73,7 @@ void CSimulator::importModel()
             cout << descripcioObjecte << '\n';
             CSimulationObject* objecte=instantiate(descripcioObjecte);
             int categoria=objecte->getCategory();
+            objecte->setToBCN((categoria > 15 || categoria<24));
             //Recuperem la categòria de l'objecte per a poder inserir l'objecte a la llista que li toca
             if (m_objectes.count(categoria) != 0) //Cal recuperar l'entrada en el diccionari i afefim el nou objecte
             {
@@ -90,6 +90,7 @@ void CSimulator::importModel()
     else 
         cout << "Unable to open file"; 
 
+    
     routeMap();
     std::vector<int> idDestins;
     idDestins=m_routeLand[11];
@@ -102,6 +103,7 @@ CSimulationObject* CSimulator::instantiate(std::string configuracio)
     opcions=split(configuracio, ',');
     int categoria=std::stoi(opcions[0]);
     int objecte=std::stoi(opcions[1]);
+    CSimulationObject* obj;
     switch(objecte){
         case 1:
         return new CMontyObject(this,categoria,newID(),opcions[2]);
@@ -150,6 +152,7 @@ CSimulationObject* CSimulator::instantiate(std::string configuracio)
         break;
         case 16:
         return new CMontyObject(this,categoria,newID(),opcions[2]);
+        return obj;
         break;
         case 17:
         return new CMontyObject(this,categoria,newID(),opcions[2]);
@@ -192,6 +195,7 @@ CSimulationObject* CSimulator::instantiate(std::string configuracio)
         break;
         case 30:
         return new CMontyObject(this,categoria,newID(),opcions[2]);
+       // return new CPassadis20Object(this,categoria,newID(),opcions[2],stoi(opcions[4]));
         break;
         case 31:
         return new CMontyObject(this,categoria,newID(),opcions[2]);
@@ -205,8 +209,8 @@ CSimulationObject* CSimulator::instantiate(std::string configuracio)
         case 34:
         return new CMontyObject(this,categoria,newID(),opcions[2]);
         break;
-/*jo*/  case 35:
-        return new CPassaport8Object(this, categoria, newID(), opcions[2], std::stoi(opcions[4]));
+        case 35:
+        return new CMontyObject(this,categoria,newID(),opcions[2]);
         break;
         case 36:
         return new CMontyObject(this,categoria,newID(),opcions[2]);
@@ -239,7 +243,10 @@ CSimulationObject* CSimulator::instantiate(std::string configuracio)
         return new CMontyObject(this,categoria,newID(),opcions[2]);
         break;
         case 46:
-        return new CMontyObject(this,categoria,newID(),opcions[2]);
+            obj=new CMontyObject(this,categoria,newID(),opcions[2]);
+            cout << "Finger Sortida --> " << obj->getName();
+            m_fingersSortida.push_back(obj);
+            return obj;
         break;
         case 47:
         return new CMontyObject(this,categoria,newID(),opcions[2]);
@@ -248,7 +255,8 @@ CSimulationObject* CSimulator::instantiate(std::string configuracio)
         return new CMontyObject(this,categoria,newID(),opcions[2]);
         break;
         case 0://Destructor
-        return new CDestructorObject(this,categoria,newID(),opcions[2]);
+        m_destructor=new CDestructorObject(this,categoria,newID(),opcions[2]);
+        return m_destructor;
         break;
     }
     return NULL;
@@ -291,16 +299,17 @@ void CSimulator::run(){
     CSimulationObject* final=m_objectes[16].at(0);
     CPassenger* pax;
     
-
-    /*for(int i=0;i<300;i++){
+// Crear paxs que volen agafar un vol
+ /*   for(int i=0;i<300;i++){
         pax=createEntity(0.1f);
-        float time=rand()%1000;
+        float time=50;
         CSimulationEvent* ev=new CSimulationEvent(time,entrada,entrada,(CEntity*)pax,ePUSH);
         scheduleEvent(ev);
     }*/
+//Crear paxs que volen tornar a BCN
     for(int i=0;i<300;i++){
         pax=createEntity(0.1f+i*15,"SNC219");
-        float time=rand()%1000;
+        float time=5;
         CSimulationEvent* ev=new CSimulationEvent(time,final,final,(CEntity*)pax,ePUSH);
         scheduleEvent(ev);
     }
@@ -310,7 +319,9 @@ void CSimulator::run(){
         CSimulationEvent* event=(CSimulationEvent*)this->m_eventList->remove();
         m_currentTime=event->getTime();
         tracing(event,true);
+        event->getConsumer()->setCurrentEntity(event->getEntity());
         event->executed();
+        event->getConsumer()->setCurrentEntity(NULL);
         delete event;
     }
     showStatistics();
@@ -387,6 +398,12 @@ std::list<struct__route> CSimulator::nextObject(CEntity* entitat, CSimulationObj
 
     CPassenger* pax=(CPassenger*) entitat;
 
+    if (pax->HaslostFlight()){
+        cout << "\n\nperd un vol\n\n";
+        struct__route itemRoute=struct__route(m_destructor,0);
+        rutes.push_back(itemRoute);
+    }
+
     if (pax->takeFlight()){
         idDestins=m_routeFlight[objecte->getCategory()];
     }
@@ -407,6 +424,9 @@ std::list<struct__route> CSimulator::nextObject(CEntity* entitat, CSimulationObj
     }
     
     return rutes;
+}
+CSimulationObject* CSimulator::getFinger(int idFinger){
+    return m_fingersSortida[idFinger];
 }
 
 float CSimulator::timeTo(CSimulationObject* desti,CPassenger* pax){
