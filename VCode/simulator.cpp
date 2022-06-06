@@ -11,6 +11,8 @@
 #include <map>
 #include <vector>
 
+#include "Passaport8Object.h"
+
 CSimulator::CSimulator(){
     m_IDObject=0;
     m_IDEntity=0;
