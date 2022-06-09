@@ -213,6 +213,7 @@ CSimulationObject* CSimulator::instantiate(std::string configuracio)
         break;
         case 35:
         return new CMontyObject(this,categoria,newID(),opcions[2]);
+
         break;
         case 36:
         return new CMontyObject(this,categoria,newID(),opcions[2]);
