@@ -7,7 +7,7 @@
 
 using namespace std;
 
-CPassaport8Object::CPassaport8Object(CSimulator* simulator, int category, string id, string nom, int maxCua) :CSimulationObject(simulator, category, id, nom)
+CPassaport8Object::CPassaport8Object(CSimulator* simulator, int category, int id, string nom, int maxCua) :CSimulationObject(simulator, category, id, nom)
 {
     EntryQueue = queue<CPassenger>();
     ExitQueue = queue<CPassenger>();

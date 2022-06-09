@@ -6,7 +6,7 @@
 
 class CPassaport8Object : public CSimulationObject {
 public:
-    CPassaport8Object(CSimulator* simulator, int category, string id, string nom, int maxCua);
+    CPassaport8Object(CSimulator* simulator, int category, int id, string nom, int maxCua);
     ~CPassaport8Object() {}
     //Métode que el simulador us invocarà per a recollir els estadístics (print per consola)
     void showStatistics();
