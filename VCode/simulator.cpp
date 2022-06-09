@@ -212,8 +212,8 @@ CSimulationObject* CSimulator::instantiate(std::string configuracio)
         return new CMontyObject(this,categoria,newID(),opcions[2]);
         break;
         case 35: /* me */
-        return new CMontyObject(this, categoria, newID(), opcions[2]);
-        //return new CPassaport8Object(this, categoria, newID(), opcions[2], std::stoi(opcions[4]));
+        //return new CMontyObject(this, categoria, newID(), opcions[2]);
+        return new CPassaport8Object(this, categoria, newID(), opcions[2], std::stoi(opcions[4]));
         break;
         case 36:
         return new CMontyObject(this,categoria,newID(),opcions[2]);

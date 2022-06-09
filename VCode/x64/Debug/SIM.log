@@ -1,1 +1,20 @@
-﻿  SIM.vcxproj -> D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\x64\Debug\SIM.exe
+﻿  simulator.cpp
+D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\simulator.cpp(216): error C2259: 'CPassaport8Object': cannot instantiate abstract class
+D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\Passaport8Object.h(7): message : see declaration of 'CPassaport8Object'
+D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\simulator.cpp(216): message : due to following members:
+D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\simulator.cpp(216): message : 'bool CSimulationObject::AcceptEntity(CSimulationObject *)': is abstract
+D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\simulationobject.h(30): message : see declaration of 'CSimulationObject::AcceptEntity'
+D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\simulator.cpp(216,37): error C2259: 'CPassaport8Object': cannot instantiate abstract class
+D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\Passaport8Object.h(7): message : see declaration of 'CPassaport8Object'
+D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\simulator.cpp(216,37): message : due to following members:
+D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\simulator.cpp(216,37): message : 'bool CSimulationObject::AcceptEntity(CSimulationObject *)': is abstract
+D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\simulationobject.h(30): message : see declaration of 'CSimulationObject::AcceptEntity'
+  Passaport8Object.cpp
+D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\Passaport8Object.cpp(22,22): error C2061: syntax error: identifier 'CCinta2Object'
+D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\Passaport8Object.cpp(32,57): error C2146: syntax error: missing ')' before identifier 'or'
+D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\Passaport8Object.cpp(32,57): error C2065: 'or': undeclared identifier
+D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\Passaport8Object.cpp(33,9): error C2143: syntax error: missing ';' before 'dynamic_cast'
+D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\Passaport8Object.cpp(33,59): error C2059: syntax error: ')'
+D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\Passaport8Object.cpp(33,61): error C2143: syntax error: missing ';' before 'return'
+D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\Passaport8Object.cpp(59,1): error C2059: syntax error: '}'
+  Generating Code...
