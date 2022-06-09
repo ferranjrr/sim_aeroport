@@ -1,0 +1,13 @@
+﻿  destructorObject.cpp
+  eventlist.cpp
+  main.cpp
+  montyobject.cpp
+  passenger.cpp
+  simulationevent.cpp
+  simulationObject.cpp
+  simulator.cpp
+  Passaport8Object.cpp
+D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\Passaport8Object.cpp(10,128): error C2664: 'CSimulationObject::CSimulationObject(CSimulator *,int,int,std::string)': cannot convert argument 3 from 'std::string' to 'int'
+D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\Passaport8Object.cpp(10,150): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\simulationobject.h(19,9): message : see declaration of 'CSimulationObject::CSimulationObject'
+  Generating Code...

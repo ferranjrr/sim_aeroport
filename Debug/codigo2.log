@@ -1,0 +1,195 @@
+﻿Compilación iniciada a las 26/05/2022 15:20:46.
+     1>Proyecto "C:\Users\alicia.las.heras\Desktop\codigo2.vcxproj" en el nodo 2 (Build destinos).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt "..\downloads\vcode 2\__macosx\vcode\._main.cpp" "..\downloads\vcode 2\vcode\destructorObject.cpp" "..\downloads\vcode 2\vcode\eventlist.cpp" "..\downloads\vcode 2\vcode\main.cpp" "..\downloads\vcode 2\vcode\montyobject.cpp" "..\downloads\vcode 2\vcode\simulationObject.cpp" "..\downloads\vcode 2\vcode\simulationevent.cpp" "..\downloads\vcode 2\vcode\simulator.cpp"
+         simulator.cpp
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(67): error C2039: 'vector': no es un miembro de 'std'
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\fstream(13): note: vea la declaración de 'std'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(67): error C2065: 'vector': identificador no declarado
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(67): error C2059: error de sintaxis: '>'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(67): error C2976: 'std::map': no hay suficientes argumentos de plantilla
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\map(72): note: vea la declaración de 'std::map'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(67): error C2238: símbolos (token) inesperados delante de ';'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(69): error C2039: 'vector': no es un miembro de 'std'
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\fstream(13): note: vea la declaración de 'std'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(69): error C2065: 'vector': identificador no declarado
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(69): error C2062: tipo 'int' inesperado
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(69): error C2976: 'std::map': no hay suficientes argumentos de plantilla
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\map(72): note: vea la declaración de 'std::map'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(69): error C2059: error de sintaxis: '>'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(69): error C2238: símbolos (token) inesperados delante de ';'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(71): error C2039: 'vector': no es un miembro de 'std'
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\fstream(13): note: vea la declaración de 'std'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(71): error C2065: 'vector': identificador no declarado
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(71): error C2062: tipo 'int' inesperado
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(71): error C2976: 'std::map': no hay suficientes argumentos de plantilla
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\map(72): note: vea la declaración de 'std::map'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(71): error C2059: error de sintaxis: '>'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(71): error C2238: símbolos (token) inesperados delante de ';'
+     1>..\downloads\vcode 2\vcode\simulator.cpp(46): error C2065: 'm_routeFlight': identificador no declarado
+     1>..\downloads\vcode 2\vcode\simulator.cpp(48): error C2065: 'm_routeLand': identificador no declarado
+     1>..\downloads\vcode 2\vcode\simulator.cpp(76): error C2065: 'm_objectes': identificador no declarado
+     1>..\downloads\vcode 2\vcode\simulator.cpp(76): error C2228: el operando izquierdo de '.count' debe tener class/struct/union
+         ..\downloads\vcode 2\vcode\simulator.cpp(76): note: el tipo es 'unknown-type'
+     1>..\downloads\vcode 2\vcode\simulator.cpp(78): error C2065: 'm_objectes': identificador no declarado
+     1>..\downloads\vcode 2\vcode\simulator.cpp(78): error C2228: el operando izquierdo de '.push_back' debe tener class/struct/union
+     1>..\downloads\vcode 2\vcode\simulator.cpp(83): error C2065: 'm_objectes': identificador no declarado
+     1>..\downloads\vcode 2\vcode\simulator.cpp(93): error C2065: 'm_routeLand': identificador no declarado
+     1>..\downloads\vcode 2\vcode\simulator.cpp(257): error C2065: 'm_objectes': identificador no declarado
+     1>..\downloads\vcode 2\vcode\simulator.cpp(257): error C3312: no se encontró ninguna función 'begin' invocable para el tipo 'unknown-type'
+     1>..\downloads\vcode 2\vcode\simulator.cpp(257): error C3312: no se encontró ninguna función 'end' invocable para el tipo 'unknown-type'
+     1>..\downloads\vcode 2\vcode\simulator.cpp(259): error C2065: 'llista': identificador no declarado
+     1>..\downloads\vcode 2\vcode\simulator.cpp(259): error C2228: el operando izquierdo de '.second' debe tener class/struct/union
+         ..\downloads\vcode 2\vcode\simulator.cpp(259): note: el tipo es 'unknown-type'
+     1>..\downloads\vcode 2\vcode\simulator.cpp(260): error C2065: 'item': identificador no declarado
+     1>..\downloads\vcode 2\vcode\simulator.cpp(260): error C2541: 'delete': no se pueden eliminar objetos que no sean punteros
+     1>..\downloads\vcode 2\vcode\simulator.cpp(263): error C2065: 'm_objectes': identificador no declarado
+     1>..\downloads\vcode 2\vcode\simulator.cpp(263): error C2228: el operando izquierdo de '.clear' debe tener class/struct/union
+         ..\downloads\vcode 2\vcode\simulator.cpp(263): note: el tipo es 'unknown-type'
+     1>..\downloads\vcode 2\vcode\simulator.cpp(288): error C2065: 'm_objectes': identificador no declarado
+     1>..\downloads\vcode 2\vcode\simulator.cpp(288): error C2228: el operando izquierdo de '.at' debe tener class/struct/union
+     1>..\downloads\vcode 2\vcode\simulator.cpp(289): error C2065: 'm_objectes': identificador no declarado
+     1>..\downloads\vcode 2\vcode\simulator.cpp(289): error C2228: el operando izquierdo de '.at' debe tener class/struct/union
+     1>..\downloads\vcode 2\vcode\simulator.cpp(301): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+     1>..\downloads\vcode 2\vcode\simulator.cpp(336): error C2065: 'm_objectes': identificador no declarado
+     1>..\downloads\vcode 2\vcode\simulator.cpp(336): error C3312: no se encontró ninguna función 'begin' invocable para el tipo 'unknown-type'
+     1>..\downloads\vcode 2\vcode\simulator.cpp(336): error C3312: no se encontró ninguna función 'end' invocable para el tipo 'unknown-type'
+     1>..\downloads\vcode 2\vcode\simulator.cpp(338): error C2065: 'llista': identificador no declarado
+     1>..\downloads\vcode 2\vcode\simulator.cpp(338): error C2228: el operando izquierdo de '.second' debe tener class/struct/union
+         ..\downloads\vcode 2\vcode\simulator.cpp(338): note: el tipo es 'unknown-type'
+     1>..\downloads\vcode 2\vcode\simulator.cpp(341): error C2065: 'item': identificador no declarado
+     1>..\downloads\vcode 2\vcode\simulator.cpp(341): error C2227: el operando izquierdo de '->simulationStart' debe señalar al tipo class/struct/union/generic
+         ..\downloads\vcode 2\vcode\simulator.cpp(341): note: el tipo es 'unknown-type'
+     1>..\downloads\vcode 2\vcode\simulator.cpp(344): error C2065: 'item': identificador no declarado
+     1>..\downloads\vcode 2\vcode\simulator.cpp(344): error C2227: el operando izquierdo de '->showStatistics' debe señalar al tipo class/struct/union/generic
+         ..\downloads\vcode 2\vcode\simulator.cpp(344): note: el tipo es 'unknown-type'
+     1>..\downloads\vcode 2\vcode\simulator.cpp(347): error C2065: 'item': identificador no declarado
+     1>..\downloads\vcode 2\vcode\simulator.cpp(347): error C2227: el operando izquierdo de '->simulationEnd' debe señalar al tipo class/struct/union/generic
+         ..\downloads\vcode 2\vcode\simulator.cpp(347): note: el tipo es 'unknown-type'
+     1>..\downloads\vcode 2\vcode\simulator.cpp(389): error C2065: 'm_routeFlight': identificador no declarado
+     1>..\downloads\vcode 2\vcode\simulator.cpp(392): error C2065: 'm_routeLand': identificador no declarado
+     1>..\downloads\vcode 2\vcode\simulator.cpp(399): error C2065: 'm_objectes': identificador no declarado
+     1>..\downloads\vcode 2\vcode\simulator.cpp(401): error C2065: 'desti': identificador no declarado
+     1>..\downloads\vcode 2\vcode\simulator.cpp(401): error C2227: el operando izquierdo de '->getCategory' debe señalar al tipo class/struct/union/generic
+         ..\downloads\vcode 2\vcode\simulator.cpp(401): note: el tipo es 'unknown-type'
+     1>..\downloads\vcode 2\vcode\simulator.cpp(402): error C2065: 'desti': identificador no declarado
+     1>..\downloads\vcode 2\vcode\simulator.cpp(402): error C2512: 'struct__route': no hay disponible un constructor predeterminado adecuado
+         c:\users\alicia.las.heras\downloads\vcode 2\vcode\structs.h(7): note: vea la declaración de 'struct__route'
+     1>..\downloads\vcode 2\vcode\simulator.cpp(411): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+         simulationevent.cpp
+     1>..\downloads\vcode 2\vcode\simulationevent.cpp(6): fatal error C1083: No se puede abrir el archivo incluir: 'struct.h': No such file or directory
+         simulationObject.cpp
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(67): error C2039: 'vector': no es un miembro de 'std'
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\fstream(13): note: vea la declaración de 'std'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(67): error C2065: 'vector': identificador no declarado
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(67): error C2059: error de sintaxis: '>'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(67): error C2976: 'std::map': no hay suficientes argumentos de plantilla
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\map(72): note: vea la declaración de 'std::map'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(67): error C2238: símbolos (token) inesperados delante de ';'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(69): error C2039: 'vector': no es un miembro de 'std'
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\fstream(13): note: vea la declaración de 'std'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(69): error C2065: 'vector': identificador no declarado
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(69): error C2062: tipo 'int' inesperado
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(69): error C2976: 'std::map': no hay suficientes argumentos de plantilla
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\map(72): note: vea la declaración de 'std::map'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(69): error C2059: error de sintaxis: '>'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(69): error C2238: símbolos (token) inesperados delante de ';'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(71): error C2039: 'vector': no es un miembro de 'std'
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\fstream(13): note: vea la declaración de 'std'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(71): error C2065: 'vector': identificador no declarado
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(71): error C2062: tipo 'int' inesperado
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(71): error C2976: 'std::map': no hay suficientes argumentos de plantilla
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\map(72): note: vea la declaración de 'std::map'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(71): error C2059: error de sintaxis: '>'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(71): error C2238: símbolos (token) inesperados delante de ';'
+         montyobject.cpp
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(67): error C2039: 'vector': no es un miembro de 'std'
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\fstream(13): note: vea la declaración de 'std'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(67): error C2065: 'vector': identificador no declarado
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(67): error C2059: error de sintaxis: '>'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(67): error C2976: 'std::map': no hay suficientes argumentos de plantilla
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\map(72): note: vea la declaración de 'std::map'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(67): error C2238: símbolos (token) inesperados delante de ';'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(69): error C2039: 'vector': no es un miembro de 'std'
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\fstream(13): note: vea la declaración de 'std'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(69): error C2065: 'vector': identificador no declarado
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(69): error C2062: tipo 'int' inesperado
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(69): error C2976: 'std::map': no hay suficientes argumentos de plantilla
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\map(72): note: vea la declaración de 'std::map'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(69): error C2059: error de sintaxis: '>'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(69): error C2238: símbolos (token) inesperados delante de ';'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(71): error C2039: 'vector': no es un miembro de 'std'
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\fstream(13): note: vea la declaración de 'std'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(71): error C2065: 'vector': identificador no declarado
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(71): error C2062: tipo 'int' inesperado
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(71): error C2976: 'std::map': no hay suficientes argumentos de plantilla
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\map(72): note: vea la declaración de 'std::map'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(71): error C2059: error de sintaxis: '>'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(71): error C2238: símbolos (token) inesperados delante de ';'
+         main.cpp
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(67): error C2039: 'vector': no es un miembro de 'std'
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\fstream(13): note: vea la declaración de 'std'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(67): error C2065: 'vector': identificador no declarado
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(67): error C2059: error de sintaxis: '>'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(67): error C2976: 'std::map': no hay suficientes argumentos de plantilla
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\map(72): note: vea la declaración de 'std::map'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(67): error C2238: símbolos (token) inesperados delante de ';'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(69): error C2039: 'vector': no es un miembro de 'std'
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\fstream(13): note: vea la declaración de 'std'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(69): error C2065: 'vector': identificador no declarado
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(69): error C2062: tipo 'int' inesperado
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(69): error C2976: 'std::map': no hay suficientes argumentos de plantilla
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\map(72): note: vea la declaración de 'std::map'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(69): error C2059: error de sintaxis: '>'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(69): error C2238: símbolos (token) inesperados delante de ';'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(71): error C2039: 'vector': no es un miembro de 'std'
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\fstream(13): note: vea la declaración de 'std'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(71): error C2065: 'vector': identificador no declarado
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(71): error C2062: tipo 'int' inesperado
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(71): error C2976: 'std::map': no hay suficientes argumentos de plantilla
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\map(72): note: vea la declaración de 'std::map'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(71): error C2059: error de sintaxis: '>'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(71): error C2238: símbolos (token) inesperados delante de ';'
+         eventlist.cpp
+         destructorObject.cpp
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(67): error C2039: 'vector': no es un miembro de 'std'
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\fstream(13): note: vea la declaración de 'std'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(67): error C2065: 'vector': identificador no declarado
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(67): error C2059: error de sintaxis: '>'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(67): error C2976: 'std::map': no hay suficientes argumentos de plantilla
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\map(72): note: vea la declaración de 'std::map'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(67): error C2238: símbolos (token) inesperados delante de ';'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(69): error C2039: 'vector': no es un miembro de 'std'
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\fstream(13): note: vea la declaración de 'std'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(69): error C2065: 'vector': identificador no declarado
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(69): error C2062: tipo 'int' inesperado
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(69): error C2976: 'std::map': no hay suficientes argumentos de plantilla
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\map(72): note: vea la declaración de 'std::map'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(69): error C2059: error de sintaxis: '>'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(69): error C2238: símbolos (token) inesperados delante de ';'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(71): error C2039: 'vector': no es un miembro de 'std'
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\fstream(13): note: vea la declaración de 'std'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(71): error C2065: 'vector': identificador no declarado
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(71): error C2062: tipo 'int' inesperado
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(71): error C2976: 'std::map': no hay suficientes argumentos de plantilla
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\map(72): note: vea la declaración de 'std::map'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(71): error C2059: error de sintaxis: '>'
+     1>c:\users\alicia.las.heras\downloads\vcode 2\vcode\simulator.h(71): error C2238: símbolos (token) inesperados delante de ';'
+         ._main.cpp
+     1>..\downloads\vcode 2\__macosx\vcode\._main.cpp : warning C4821: No se puede determinar el tipo de codificación Unicode. Guarde el archivo con signatura (BOM)
+     1>..\downloads\vcode 2\__macosx\vcode\._main.cpp(1): error C2018: carácter '0x5' desconocido
+     1>..\downloads\vcode 2\__macosx\vcode\._main.cpp(1): error C2018: carácter '0x16' desconocido
+     1>..\downloads\vcode 2\__macosx\vcode\._main.cpp(1): error C2018: carácter '0x7' desconocido
+     1>..\downloads\vcode 2\__macosx\vcode\._main.cpp(1): error C2018: carácter '0x2' desconocido
+     1>..\downloads\vcode 2\__macosx\vcode\._main.cpp(1): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+     1>..\downloads\vcode 2\__macosx\vcode\._main.cpp(1): error C2146: error de sintaxis: falta ';' delante del identificador 'OS'
+     1>..\downloads\vcode 2\__macosx\vcode\._main.cpp(1): error C2059: error de sintaxis: 'sufijo de número incorrecto'
+     1>..\downloads\vcode 2\__macosx\vcode\._main.cpp(1): error C2018: carácter '0x1' desconocido
+     1>..\downloads\vcode 2\__macosx\vcode\._main.cpp(1): error C2018: carácter '0x14' desconocido
+     1>..\downloads\vcode 2\__macosx\vcode\._main.cpp(1): error C2018: carácter '0x10' desconocido
+         Generando código...
+     1>Compilación del proyecto terminada "C:\Users\alicia.las.heras\Desktop\codigo2.vcxproj" (Build destinos) -- ERROR.
+
+ERROR al compilar.
+
+Tiempo transcurrido 00:00:01.91
