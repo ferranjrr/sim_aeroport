@@ -11,7 +11,7 @@ public:
     //Métode que el simulador us invocarà per a recollir els estadístics (print per consola)
     void showStatistics();
     //És una funció virtial pura així que us tocarà implementar-la indiferentment de si la invoqueu o no.
-    bool AcceptEntity(CEntity* entity, CSimulationObject* emissor);
+    bool AcceptEntity(CSimulationObject* emissor);
     //Processar un esdeveniment de simulació, funció pura que us toca implementar
 
     bool SendMeNow(CSimulationObject* tincEspai);
@@ -26,6 +26,10 @@ protected:
     std::string _nom;
 
 private:
+
+    bool to_Sortida(CSimulationEvent* event);
+    bool to_Restauracio(CSimulationEvent* event);
+
     queue<CPassenger*> WaitingQueue;
     queue<CPassenger*> ExitQueue;
 
