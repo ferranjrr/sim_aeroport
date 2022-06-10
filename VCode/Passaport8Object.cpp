@@ -23,19 +23,11 @@ bool CPassaport8Object::AcceptEntity(CSimulationObject* emissor) {
 
     if (dynamic_cast<CPassenger*>(entity) == nullptr) return false; //No és un passatger
 
-    if (dynamic_cast<CCinta2Object*>(emissor) == nullptr ||
-        dynamic_cast<CCinta4Object*>(emissor) == nullptr ||
-        dynamic_cast<CCinta12Object*>(emissor) == nullptr ||
-        dynamic_cast<CElevador7Object*>(emissor) == nullptr ||
-        dynamic_cast<CElevador10Object*>(emissor) == nullptr ||
-        dynamic_cast<CElevador11Object*>(emissor) == nullptr ||
-        dynamic_cast<CElevador17Object*>(emissor) == nullptr ||
-        dynamic_cast<CElevador18Object*>(emissor) == nullptr ||
-        dynamic_cast<CElevador19Object*>(emissor) == nullptr) return false; //No és l'objecte esperat.
+    if (emissor->getCategory() != 7 || emissor->getCategory() != 8) return false; //No és l'objecte esperat.
 
     if (dynamic_cast<CPassenger*>(entity)->isSchengen() ||
         dynamic_cast<CPassenger*>(entity)->HaslostFlight() ||
-        not dynamic_cast<CPassenger*>(entity)->takeFlight()) return false;
+        !dynamic_cast<CPassenger*>(entity)->takeFlight()) return false;
     if (getState() == IDLE) return true;
     else {
         WaitingQueue.push(dynamic_cast<CPassenger*>(entity));
@@ -79,7 +71,7 @@ void CPassaport8Object::processEvent(CSimulationEvent* event) {
     if (event->getEventType() == eSERVICE) {
         if (m_category > 0)
         {
-            if (((CPassenger*)event->getEntity())->getDepartureTime() - m_Simulator->time() - 13 - 15 < 40 + 15) {
+            if (((CPassenger*)event->getEntity())->getDepartureTime() - m_Simulator->time() - 13 - 15 < 40 + 15) { /*Retocar*/
             //Queden menys de 40 minuts perque surti el vol (contant els 15 minuts per arribar a sortida)
             //Cap a Sortida
                 if (!to_Sortida(event) && !to_Restauracio(event)) ExitQueue.push((CPassenger*)event->getEntity());
@@ -102,9 +94,7 @@ bool CPassaport8Object::to_Sortida(CSimulationEvent* event) {
     CSimulationEvent* eventService;
 
     for (struct__route d : destins) {
-        if (dynamic_cast<CSortida2Object*>(d.destination) != nullptr ||
-            dynamic_cast<CSortida15Object*>(d.destination) != nullptr ||
-            dynamic_cast<CSortida17Object*>(d.destination) != nullptr)
+        if (d.destination->getCategory() == 15)
         {
             if (d.destination->AcceptEntity(this)) {
                 float tempsEvent = d.time + m_Simulator->time();
@@ -126,11 +116,7 @@ bool CPassaport8Object::to_Restauracio(CSimulationEvent* event) {
     CSimulationEvent* eventService;
 
     for (struct__route d : destins) {
-        if (dynamic_cast<CRestauracio1Object*>(d.destination) != nullptr ||
-            dynamic_cast<CRestauracio4Object*>(d.destination) != nullptr ||
-            dynamic_cast<CRestauracio6Object*>(d.destination) != nullptr ||
-            dynamic_cast<CRestauracio10Object*>(d.destination) != nullptr ||
-            dynamic_cast<CRestauracio18Object*>(d.destination) != nullptr)
+        if (d.destination->getCategory() == 13)
         {
             if (d.destination->AcceptEntity(this)) {
                 float tempsEvent = d.time + m_Simulator->time();
