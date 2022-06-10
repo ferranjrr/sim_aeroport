@@ -1,8 +1,2 @@
 ﻿  Passaport8Object.cpp
-D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\Passaport8Object.cpp(25,22): error C2061: syntax error: identifier 'CCinta2Object'
-D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\Passaport8Object.cpp(35,57): error C2146: syntax error: missing ')' before identifier 'or'
-D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\Passaport8Object.cpp(35,57): error C2065: 'or': undeclared identifier
-D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\Passaport8Object.cpp(36,9): error C2143: syntax error: missing ';' before 'dynamic_cast'
-D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\Passaport8Object.cpp(36,59): error C2059: syntax error: ')'
-D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\Passaport8Object.cpp(36,61): error C2143: syntax error: missing ';' before 'return'
-D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\Passaport8Object.cpp(62,1): error C2059: syntax error: '}'
+  SIM.vcxproj -> D:\Dades\2021-2022 Q2\SIM\sim_aeroport\VCode\x64\Debug\SIM.exe

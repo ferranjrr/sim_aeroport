@@ -37,7 +37,7 @@ bool CPassaport8Object::AcceptEntity(CSimulationObject* emissor) {
 
 //Métode que el simulador us invocarà per a recollir els estadístics (print per consola)
 void CPassaport8Object::showStatistics() {
-    cout << "Sóc en el control de passaport " << _nom << " i estic " << DELAY << " a la cua " << endl;
+    cout << "Soc en " << _nom << " i estic " << DELAY << " minuts en el control de passaport " << endl;
 };
 
 bool CPassaport8Object::SendMeNow(CSimulationObject* tincEspai) {
@@ -48,7 +48,7 @@ bool CPassaport8Object::SendMeNow(CSimulationObject* tincEspai) {
         else if (tincEspai->getCategory() == 15) tempsEvent = 15 /*Retocar*/ + m_Simulator->time();
         else return false;
 
-        CPassenger* p = ExitQueue.back();
+        CPassenger* p = ExitQueue.front();
         CSimulationEvent* eventService = new CSimulationEvent(tempsEvent, this, tincEspai, p, ePUSH);
         m_Simulator->scheduleEvent(eventService);
 
@@ -82,6 +82,13 @@ void CPassaport8Object::processEvent(CSimulationEvent* event) {
 
                 if (!to_Restauracio(event) && !to_Sortida(event)) ExitQueue.push((CPassenger*)event->getEntity());
             }
+
+
+            //Fer els sendmenow !!!???
+            std::list<struct__route> destins;
+            destins = m_Simulator->nextObject(event->getEntity(), this);
+
+            !WaitingQueue.front() 
         }
     }
 }
