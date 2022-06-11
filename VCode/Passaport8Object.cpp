@@ -54,11 +54,33 @@ bool CPassaport8Object::SendMeNow(CSimulationObject* tincEspai) {
         tempsEvent = m_Simulator->timeTo(tincEspai, (CPassenger*)tincEspai->getCurrentEntity()) + m_Simulator->time();
 
         CPassenger* p = ExitQueue.front();
+
+        if (tincEspai->getCategory() == 13) { //L'objecte és restauració
+
+            /* Per evitar crear nous punters a objectes que encara no sé la seva capcelera, el temps que triguen els passatgers
+            a moures d'un lloc a un altre s'ha calculat a mà, tot observant què feia la funció timeTo de simulator.cpp*/
+
+            float tempsPassaport2Sortida = 135; //abs(15 - 10*15)
+            float tempsPassaport2Restauracio = 137; //abs(13 - 10*15)
+            float tempsRestauracio2Sortida = 180; //abs(15 - 13*15)
+            float tempsPassaport2Restauracio2Sortida = tempsPassaport2Restauracio + tempsRestauracio2Sortida; //317
+            float tempsSortidaVol = p->getDepartureTime() - m_Simulator->time();
+
+
+            //Si queda poc temps perque surti el vol o ha de passar per restauració i no arriba a temps a agafar el vol, no l'envio!
+            if ((tempsSortidaVol < 40 + tempsPassaport2Sortida) || (tempsSortidaVol < 40 + tempsPassaport2Restauracio2Sortida)) {
+                return false;
+            }
+            ++RestauracioCounter;
+        }
+        else ++SortidaCounter;
+        
         CSimulationEvent* eventService = new CSimulationEvent(tempsEvent, this, tincEspai, p, ePUSH);
         m_Simulator->scheduleEvent(eventService);
 
         ExitQueue.pop();
         return true;
+       
     }
 }
 
