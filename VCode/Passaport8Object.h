@@ -30,9 +30,12 @@ private:
     bool to_Sortida(CSimulationEvent* event);
     bool to_Restauracio(CSimulationEvent* event);
 
-    queue<CPassenger*> WaitingQueue;
+    queue<CSimulationObject*> WaitingQueue;
     queue<CPassenger*> ExitQueue;
 
     int DELAY;
+
+    int RestauracioCounter;
+    int SortidaCounter;
 };
 
